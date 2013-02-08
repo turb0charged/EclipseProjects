@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class RepetiveAddition {
+	public static void main(String[]args){
+		Scanner scan=new Scanner(System.in);
+		int value1;
+		int value2;
+		
+		System.out.println("Please enter two positive values to find their product.");
+		value1=scan.nextInt();
+		value2=scan.nextInt();
+		
+		System.out.println("This is the product of "+value1+" and "+value2+": "+repetitiveRecursion(value1, value2)+" this is recursive");
+		System.out.println("This is the product of "+value1+" and "+value2+": "+repetitiveIterative(value1, value2)+" this is iterative");
+	}
+	public static int repetitiveRecursion(int beingAdded, int timesAdded){
+		if(timesAdded==1)
+			return beingAdded;
+		return beingAdded+repetitiveRecursion(beingAdded, timesAdded-1);
+	}
+	public static int repetitiveIterative(int beingAdded,int timesAdded){
+		int product=0;
+		for(int i=1;i<=timesAdded;i++)
+			product+=beingAdded;
+		return product;
+	}
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class SumNElements {
+	public static void main(String[]args){
+		Scanner scan=new Scanner(System.in);
+		int[] a={1,2,3,4,5,6,7,8,9,10};				// simple array to check addition method is correct
+		int num=0; 									// variable for elements of array being summed
+		
+		System.out.println("Input the how many elements of the array you wish to see summed(10 or less)");
+		num=scan.nextInt();
+		
+		System.out.println("This is the sum of the first " +num+" elements of the array: "+arraysumRecursive(a,num-1)+" this is recursive.");
+		System.out.println("This is the sum of the first " +num+" elements of the array: "+arraysumIterative(a,num-1)+" this is iterative.");
+	}
+	public static int arraysumRecursive(int []a,int num){
+		if(num==0)
+			return a[0];
+		return a[num]+arraysumRecursive(a,num-1);
+	}
+	public static int arraysumIterative(int[] a, int num){
+		int sum=0;
+		for(int i=0;i<=num;i++)
+			sum+=a[i];
+		return sum;
+	}
+}

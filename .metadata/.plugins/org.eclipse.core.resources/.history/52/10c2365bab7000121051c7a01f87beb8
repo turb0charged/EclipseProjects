@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class IntToPower {
+	public static void main(String[]args){
+		Scanner scan=new Scanner(System.in);
+		int number;
+		int power;
+		
+		System.out.println("Please input the integer and the power you would like to see it raised to:");
+		number=scan.nextInt();
+		power=scan.nextInt();
+		
+		System.out.println(number+ " raised to the "+power+" is "+topower(number,power));
+	}
+	public static int topower(int num, int pow){
+		if(pow==0)
+			return 1;
+		return num*topower(num,pow-1);
+	}
+}
