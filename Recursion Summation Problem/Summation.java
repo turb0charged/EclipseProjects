@@ -1,3 +1,6 @@
+// Hector Castillo
+// Prof. D. Orden
+// Data Structures
 import java.util.Scanner;
 public class Summation{
 	public static void main(String[]args){
