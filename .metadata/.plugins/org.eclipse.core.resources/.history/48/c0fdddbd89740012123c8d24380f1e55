@@ -1,6 +1,3 @@
-// Hector Castillo
-// Prof. D. Orden
-// Data Structures
 import java.util.Scanner;
 public class IntToPower {
 	public static void main(String[]args){
