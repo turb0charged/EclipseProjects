@@ -1,3 +1,6 @@
+// Hector Castillo
+// Prof. D. Orden
+// Data Structures
 public class Summer{
 	private int num;
 	public Summer(int newNumber){
