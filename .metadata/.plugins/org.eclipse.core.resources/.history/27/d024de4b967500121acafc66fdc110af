@@ -1,0 +1,42 @@
+// Hector Castillo
+// Prof. D. Orden
+// Data Structures
+import java.util.Scanner;
+public class FiveDigits {
+	public static void main(String[]args){
+		Scanner scan=new Scanner(System.in);
+		int value1;
+		int value2;
+		
+		System.out.println("Please input a positive 5 digit integer.");
+		value1=scan.nextInt();
+		System.out.println("Would you like to print the number spaced out forward(1) or backward(2)?");
+		value2=scan.nextInt();
+		
+		if(value2==1){
+			System.out.println("This is the interger spaced out forward: ");
+			forwardDigit(value1);
+		}
+		else{ 
+			System.out.println("This is the interger spaced out backward: ");
+			backwardDigit(value1);
+		}
+		
+	}
+	public static void forwardDigit(int digit){
+		if(digit/10==0)
+			System.out.println(digit);
+		else{ 
+			forwardDigit(digit/10);
+			System.out.print(digit%10+" ");
+		}
+	}
+	public static void backwardDigit(int digit){
+		if(digit/10==0)
+			System.out.println(digit);
+		else{
+			System.out.print(digit%10+" ");
+			backwardDigit(digit/10);
+		}
+	}
+}
